@@ -1,0 +1,54 @@
+Express is a framework to make a webservice in node
+
+Restful services
+REST = Representational State Transfer
+
+CRUD operations = Create, Read, Update and Delete
+HTTP request (methods) = Get (get data), POST (creating data), PUT (updating data), DELETE (deleting data)
+
+http(s) = protocol
+www.jplm.dk = domain
+/api = convention too expose ones api's
+/customer = refers to the collection of customers (endpoint)
+
+
+How to, dynamically, assign a port number via an environment variable:
+// When you deploy the port is dynamicly assigned by the hosting environment
+// Environment variable (PORT) to make port dynamic
+// Use global object process to access port
+// To set an environment variable in windows use set/export PORT="theportnumber"
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Listening on port ${port}...`));
+
+
+How to use nodemon, to dynamically restart the server, whenever we make changes to our code:
+To get nodemon I can install it with the command: npm i -g nodemon (will install global so I can use it everywhere)
+To start nodemon don't write node "filename.js" but write nodemon "filename.js"
+
+
+How to read request parameters (/:id):
+//:id is the parameter to read it use req.params.id
+app.get("/api/courses/:id", (req, res) => {
+  res.send(req.params.id);
+});
+
+
+How to read query parameters (/?sort=asc):
+app.get("/api/posts/:year/:month", (req, res) => {
+    res.send(req.query);  // reading query string which is an object in key: value pairs
+  })
+
+
+How to read the request body (typically for POST or PUT):
+Example from a POST method (to read body use: req.body."propertyname")
+
+// POST method
+app.post("/api/courses", (req, res) => {
+  const course = {
+    // making an object since I am not using a database atm.
+    id: courses.length + 1,
+    name: req.body.name
+  };
+  courses.push(course);
+  res.send(course);
+});

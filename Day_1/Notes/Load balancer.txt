@@ -1,0 +1,11 @@
+Use a load balancer
+No matter how optimized an app is, a single instance can handle only a limited amount of load and traffic. One way to scale an app is to run 
+multiple instances of it and distribute the traffic via a load balancer. Setting up a load balancer can improve your app’s performance 
+and speed, and enable it to scale more than is possible with a single instance.
+
+A load balancer is usually a reverse proxy that orchestrates traffic to and from multiple application instances and servers. 
+You can easily set up a load balancer for your app by using Nginx or HAProxy.
+
+With load balancing, you might have to ensure that requests that are associated with a particular session ID connect to the process 
+that originated them. This is known as session affinity, or sticky sessions, and may be addressed by the suggestion above to use a 
+data store such as Redis for session data (depending on your application). For a discussion, see Using multiple nodes.
