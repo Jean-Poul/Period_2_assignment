@@ -1,6 +1,6 @@
 # Needs refactoring
 
-# Period-1 Vanilla JavaScript, Es-next, Node.js, Babel + Webpack and TypeScript-1
+# Period-2 Node, Express with TypeScript, JavaScript Backend 
 
 ## Explain and Reflect:
 - Explain the differences between Java and JavaScript + node. Topics you could include:
