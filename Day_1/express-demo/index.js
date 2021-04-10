@@ -11,7 +11,7 @@ const express = require("express"); // npm i express
 // By convention this is called app
 const app = express();
 
-// Addind a piece of middleware
+// Adding a piece of middleware
 app.use(express.json());
 
 // Simulating a database of objects

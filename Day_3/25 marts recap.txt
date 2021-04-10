@@ -1,0 +1,62 @@
+debug vs console.log
+
+console.log er blockerende og de stopper ens server når den kører
+debug er sat som en miljøvariable. Herfor er det bedst at bruge debug så man kan slå sine "logs" fra
+et sted og ikke skal igennem alle ens console.log og man bruger det heller ikke i production miljø
+
+------------------------------------------------------------------------------------------------
+
+@Types
+
+@Types er til typescript - uden @Types er det en javascript driver
+
+------------------------------------------------------------------------------------------------
+
+.router vs .app 
+
+router.get is only for defining subpaths. Consider this example:
+
+var router = express.Router();
+
+app.use('/first', router); // Mount the router as middleware at path /first
+
+router.get('/sud', smaller);
+
+router.get('/user', bigger);
+If you open /first/sud, then the smaller function will get called.
+If you open /first/user, then the bigger function will get called.
+In short, app.use('/first', router) mounts the middleware at path /first, then router.get sets the subpath accordingly.
+
+But if we instead use the following:
+
+app.use('/first', fun);
+
+app.get('/sud', bigger);
+
+app.get('/user', smaller);
+If you open /first in your browser, fun will get called,
+For /sud, bigger will get called
+For /user, smaller will get called
+But remember for /first/sud, no function will get called.
+
+------------------------------------------------------------------------------------------------
+
+app er global og kan bruges over alt i ens application. Man kan også gøre brug af andre ting ved at sige
+app.set(key, value).
+
+------------------------------------------------------------------------------------------------
+
+Database
+
+MongoDB Horizontal scaling:
+Scaling Horizontally
+Sharding stores data across multiple nodes, distributing the load and the processes across the hosts. ... 
+Scaling horizontally takes advantage of MongoDB's built in sharding ability and also benefits from the 
+ability to use cheaper commodity hardware.
+
+------------------------------------------------------------------------------------------------
+
+Index:
+
+Er til for at kunne slå en record(row) op hurtigere ved hjælp af en pointer (index)
+

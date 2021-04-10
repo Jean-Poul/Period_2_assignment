@@ -1,0 +1,13 @@
+authentication hvem er brugeren
+
+In computing, authentication is the process of verifying the identity of a person or device. 
+A common example is entering a username and password when you log in to a website. 
+Entering the correct login information lets the website know 1) who you are and 2) that it is a
+ctually you accessing the website.
+
+
+authorization hvad må brurgeren
+
+Authorization is the function of specifying access rights/privileges to resources, which is 
+related to general information security and computer security, and to access control in particular. 
+More formally, "to authorize" is to define an access policy.

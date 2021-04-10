@@ -1,0 +1,17 @@
+Lars har sat vores start code op sådan at man compiler alt vores kode til javascript med "tsc", da han
+vil have microsoft til at translate koden og ikke ts-node. (prod miljø).
+
+bin -> www.ts er hvor koden starter med -> npm start
+
+PORT og debug er gemt i .env fil
+
+opsætter node til at kunne lytte på typescript filer "ts": "node -r ts-node/register" -
+for at npm run dev:debug skal virke skal man tilføje et flag i visual studio code ->
+view -> command palette -> debug toggle auto attach -> only with flag
+
+Alt nodemon config er under nodemonConfig
+
+debug statements er når vi kan logge lokalt i f.eks console
+men applications logging er i production og når man lægger logger til log filer
+
+

@@ -1,0 +1,11 @@
+debugging me console.log sløver ens program og er besværligt at se efter hele tiden, så man bruger noget andet til det
+
+
+lars kan bedst lide at når vi deployer er udelukkende js og når vi developer gør brug af ts-node
+
+
+Følgende gør at man får intellisens:
+
+"devDependencies": {
+    "@types/express": "^4.17.11"
+  }
