@@ -1,4 +1,4 @@
-### Alexander Pihl - 4. semester - Fullstack JavaScript
+### Jean-Poul Leth-Møller - 4. semester - Fullstack JavaScript
 ### Study Group:
 - [Alexander Pihl](https://github.com/AlexanderPihl)
 - [Jean-Poul Leth-Møller](https://github.com/Jean-Poul)
