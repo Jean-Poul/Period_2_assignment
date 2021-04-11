@@ -55,7 +55,7 @@ describe("## Verify the Friends Facade ##", () => {
                 expect(err instanceof ApiError).to.be.true
             }
         })
-
+        // Same as above but just with the use of chaiAsPromised
         it("It should not add a user with a role (validation fails)", async () => {
             const newFriend = { firstName: "Jan", lastName: "Olsen", email: "jan@b.dk", password: "secret", role: "admin" }
             await expect(facade.addFriend(newFriend)).to.be.rejectedWith(ApiError)

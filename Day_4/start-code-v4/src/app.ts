@@ -54,8 +54,8 @@ app.use(simpleLogger)
 
 
 
-// Something has to go in here
 //app.use('/static', express.static('public')
+// cwd() = current working directory
 app.use(express.static(path.join(process.cwd(), "public"))) // So I can access files from the outside
 
 // Auth middleware import
@@ -87,7 +87,14 @@ app.get("/demo", (req, res) => {
 /**
  * Middleware for error handling
  */
-
+/* app.use((req, res, next) => {
+  if(req.originalUrl.startsWith('/api')){
+    res.status(404).json({
+      code: 404,
+      msg: 'This API does not contain this endpoint'
+     })
+  }
+}) */
 // Default 404-handler for api-requests
 app.use('/api', (req, res, next) => {
   res.status(404).json({
